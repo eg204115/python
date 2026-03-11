@@ -54,3 +54,8 @@ def square_root(n):
 import math
 def logarithm(n, base=math.e):
     return math.log(n, base)
+# Calculate the exponential
+def exponential(n):
+    return math.exp(n)  
+# Calculate the sine of an angledef sine(angle):
+    return math.sin(math.radians(angle))    
