@@ -49,3 +49,10 @@ def missing_number(nums):
     return total - sum(nums)
 
 print(missing_number([1,2,3,5]))
+
+# Anagram check
+
+def are_anagrams(str1, str2):
+    return sorted(str1) == sorted(str2)
+
+print(are_anagrams("listen", "silent"))
