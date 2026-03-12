@@ -56,3 +56,17 @@ def are_anagrams(str1, str2):
     return sorted(str1) == sorted(str2)
 
 print(are_anagrams("listen", "silent"))
+
+# Flatten a nested list
+def flatten(lst):
+    result = []
+    
+    for i in lst:
+        if isinstance(i, list):
+            result.extend(flatten(i))
+        else:
+            result.append(i)
+            
+    return result
+
+print(flatten([1, [2, [3, 4]], 5]))
