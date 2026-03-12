@@ -33,3 +33,11 @@ def second_largest(lst):
         elif first > num > second:
             second = num
     return second if second != float('-inf') else None
+
+# Merge 2 dictionaries
+dict1 = {"a":1, "b":2}
+dict2 = {"c":3, "d":4}
+
+merged = {**dict1, **dict2}
+
+print(merged)
