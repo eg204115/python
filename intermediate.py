@@ -41,3 +41,11 @@ dict2 = {"c":3, "d":4}
 merged = {**dict1, **dict2}
 
 print(merged)
+# Find the missing number in a list of consecutive numbers
+
+def missing_number(nums):
+    n = len(nums) + 1
+    total = n * (n + 1) // 2
+    return total - sum(nums)
+
+print(missing_number([1,2,3,5]))
