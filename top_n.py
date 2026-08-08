@@ -37,3 +37,6 @@ logs = [
 
 top_users = top_spenders(logs, n=3)
 print("Top spenders:")
+for user_id, total in top_users:    
+    print(f"{user_id}: ${total:.2f}")   
+    
