@@ -8,3 +8,31 @@ def dedup_records(records, key):
             unique_records.append(record)
             seen.add(key_value)
     return unique_records
+
+# Batching an iterable (pagination-style)
+
+def batch(iterable, batch_size):
+    batch = []
+    for item in iterable:
+        batch.append(item)
+        if len(batch) == batch_size:
+            yield batch
+            batch = []
+    if batch:
+        yield batch
+for chunk in batch(range(10), 3):
+    print(chunk)
+
+
+def batch(iterable, n):
+	batch = []
+	for item in iterable:
+		batch.append(item)
+		if len(batch) == n:
+			yield batch
+			batch = []
+	if batch:
+		yield batch
+for chunk in batch(range(10),3):
+ 	print(chunk)
+			
